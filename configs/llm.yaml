@@ -1,0 +1,53 @@
+models:
+  gpt:
+    name: "gpt-5.1"
+    api_base: "https://oa.api2d.net"
+    api_key_env: "OPENAI_API_KEY"
+    api_endpoint: "/v1/chat/completions"
+    response_format: "openai"
+    timeout: 30
+    max_retries: 3
+
+  claude:
+    name: "claude-sonnet-4-5"
+    api_base: "https://oa.api2d.net"
+    api_key_env: "ANTHROPIC_API_KEY"
+    api_endpoint: "/claude/v1/messages"
+    response_format: "claude"
+    extra_headers:
+      x-api-key: "env:ANTHROPIC_API_KEY"
+    stream: false
+    timeout: 30
+    max_retries: 3
+
+  gemini:
+    name: "gemini-2.0-flash"
+    api_base: "https://oa.api2d.net"
+    api_key_env: "GEMINI_API_KEY"
+    api_endpoint: "/v1/chat/completions"
+    response_format: "openai"
+    extra_params:
+      safe_mode: "false"
+      moderation: "false"
+      moderation_stop: "false"
+      stream: "false"
+    timeout: 30
+    max_retries: 3
+
+  deepseek:
+    name: "deepseek-chat"
+    api_base: "https://api.deepseek.com/v1"
+    api_key_env: "DEEPSEEK_API_KEY"
+    api_endpoint: "/chat/completions"
+    response_format: "openai"
+    client_type: "openai"
+    timeout: 30
+    max_retries: 3
+
+data:
+  model_choice: "deepseek"
+
+logging:
+  level: "INFO"
+  file_path: "./logs/test2.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

@@ -1,0 +1,42 @@
+You are an expert specializing in feature engineering for imbalanced classification.
+
+Your task: given two feature metadata JSON objects, create ONE new derived feature by combining these two parent features.
+
+Output must be a SINGLE feature metadata object with EXACTLY the same keys as the original metadata rows:
+{
+  "feat_name": "(fAfB)",
+  "feat_type": "...",
+  "mean": ...,
+  "std": ...,
+  "skew": ...,
+  "kurtosis": ...,
+  "min": ...,
+  "max": ...,
+  "q01": ...,
+  "q05": ...,
+  "q25": ...,
+  "q50": ...,
+  "q75": ...,
+  "q95": ...,
+  "q99": ...,
+  "n_unique": ...,
+  "missing_rate": ...,
+  "mi_to_y": ...,
+  "info_gain": ...,
+  "FeatureScore": 0,
+  "lineage": "derived",
+  "ops_chain": ["..."],
+  "gen_round": <value>
+}
+
+Rules:
+1. The new feature must be a meaningful combination of the two parent features, such as product, ratio, difference, normalized interaction, or weighted combination.
+2. All statistical fields must be logically estimated from the parent metadata.
+3. Quantiles must be monotonic and consistent with min/max.
+4. The new FeatureScore is set to 0.
+5. "mi_to_y" is the mutual information between this feature and the classification target. "info_gain" is an information gain measure for multi-class classification.
+6. feat_name MUST concatenate the two parent names wrapped in parentheses, for example "(f2f4)".
+7. ops_chain MUST be a list with EXACTLY ONE short natural-language string. It must state the base feature, explain how the parents are combined, summarize how mean/std/skew/kurtosis/min/max change, and explain why the change may help minority-class discrimination.
+8. gen_round MUST be max(parent.gen_round) + 1.
+
+Return ONLY the JSON object of the new feature metadata.

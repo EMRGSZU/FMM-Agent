@@ -1,0 +1,6 @@
+Please analyze the following feature meta information and provide a structured summary.
+
+FMI Data (selected from {feature_count} features):
+{feature_meta_content}
+
+Return your analysis in the JSON format specified in the system prompt.

@@ -1,0 +1,14 @@
+Please analyze these parent and child feature metadata to generate trend adjustment recommendations.
+
+PARENT FEATURE:
+{parent_json}
+
+CHILD FEATURE:
+{child_json}
+
+TRANSFORMATION DESCRIPTION:
+{ops_description}
+
+Compare the statistical properties, study the transformation description, and evaluate feature scores. Generate trend adjustments that transform the parent feature toward the child's statistical characteristics while maintaining numerical stability and discriminative power.
+
+Return your recommendations in the JSON format specified in the system prompt.

@@ -1,0 +1,21 @@
+industry_data:
+  train_path: "Datasets/test/"
+  test_path: "Datasets/test/"
+  has_header: false
+
+HD_data:
+  path: "Datasets/test_HD/"
+  has_header: false
+
+test_data:
+  train_path: "Datasets/"
+  test_path: "Datasets/"
+  has_header: false
+
+output:
+  results_path: "results/"
+  meta_info_path: "meta-info/"
+  log_path: "logs/"
+
+algorithm:
+  regular: true

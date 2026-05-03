@@ -1,0 +1,11 @@
+Please perform a crossover operation on these two features to generate ONE meaningful derived feature.
+
+Feature 1:
+{feature1_json}
+
+Feature 2:
+{feature2_json}
+
+Analyze their statistical properties, distributions, and potential relationship. Create only one crossover feature that meaningfully combines their characteristics.
+
+Return your result in the JSON format specified in the system prompt.

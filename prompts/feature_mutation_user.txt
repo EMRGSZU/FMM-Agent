@@ -1,0 +1,8 @@
+Please perform a mutation operation on this feature to generate ONE meaningful derived feature.
+
+Original Feature:
+{feature_json}
+
+Analyze its statistical properties, distribution, and transformation potential. Create only one mutated feature that may improve performance in an imbalanced classification setting.
+
+Return your result in the JSON format specified in the system prompt.
