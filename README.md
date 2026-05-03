@@ -13,6 +13,7 @@ Industrial classification tasks often involve class imbalance, noise, and non-st
 ## API Access URL of This Project
 
 DeepSeek: https://platform.deepseek.com/
+
 Chatgpt/Gemini/Claude: https://api2d.com/
 
 
